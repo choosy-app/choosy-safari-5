@@ -25,13 +25,20 @@
       };
 
       ChoosyExtension.choosyContextMenuItem = {
+        getURL: function() {
+          if(this.userInfo) {
+            return this.userInfo;
+          } else {
+            return safari.application.activeBrowserWindow.activeTab.url;
+          }
+        },
         validate: function() {
-          var url = safari.application.activeBrowserWindow.activeTab.url;
+          var url = ChoosyExtension.choosyContextMenuItem.getURL.apply(this);
           this.target.disabled = !url;
         },
         click: function() {
+          var url = ChoosyExtension.choosyContextMenuItem.getURL.apply(this);
           var win = safari.application.activeBrowserWindow;
-          var url = win.activeTab.url;
           Choosy.promptAll(url, win);
         }
       }

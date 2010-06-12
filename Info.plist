@@ -50,7 +50,12 @@
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
-		<dict/>
+		<dict>
+			<key>Start</key>
+			<array>
+				<string>end.js</string>
+			</array>
+		</dict>
 	</dict>
 	<key>Description</key>
 	<string>Integrates Choosy with Safari 5</string>
