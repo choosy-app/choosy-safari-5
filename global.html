@@ -18,7 +18,12 @@
         }
       }, false);
 
-      safari.application.addEventListener("")
+      safari.application.addEventListener("validate", function(event) {
+        if(event.command === "choosy-toolbar-item") {
+          var url = event.target.browserWindow.activeTab.url;
+          event.target.disabled = !url;
+        }
+      }, false);
 
     </script>
   </head>
