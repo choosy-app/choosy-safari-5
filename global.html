@@ -24,6 +24,18 @@
         }
       };
 
+      ChoosyExtension.choosyContextMenuItem = {
+        validate: function() {
+          var url = safari.application.activeBrowserWindow.activeTab.url;
+          this.target.disabled = !url;
+        },
+        click: function() {
+          var win = safari.application.activeBrowserWindow;
+          var url = win.activeTab.url;
+          Choosy.promptAll(url, win);
+        }
+      }
+
       safari.application.addEventListener("command", function(event) {
         if(ChoosyExtension.hasOwnProperty(event.command)) {
           ChoosyExtension[event.command].click.apply(event);
