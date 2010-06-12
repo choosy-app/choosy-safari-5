@@ -20,9 +20,9 @@
 		<array>
 			<dict>
 				<key>Command</key>
-				<string>choosy-button</string>
+				<string>choosyContextMenuItem</string>
 				<key>Identifier</key>
-				<string>choosy-button</string>
+				<string>choosyContextMenuItem</string>
 				<key>Title</key>
 				<string>Open with Choosy</string>
 			</dict>
@@ -33,9 +33,9 @@
 		<array>
 			<dict>
 				<key>Command</key>
-				<string>choosy-toolbar-item</string>
+				<string>choosyToolbarItem</string>
 				<key>Identifier</key>
-				<string>choosy-toolbar-item</string>
+				<string>choosyToolbarItem</string>
 				<key>Image</key>
 				<string>images/icon.png</string>
 				<key>Label</key>

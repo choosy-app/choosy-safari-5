@@ -4,6 +4,8 @@
     <title>Choosy Safari</title>
     <script>
 
+      var ChoosyExtension = {};
+
       var Choosy = {
         promptAll: function(url, win) {
           var choosyURL = "x-choosy://prompt.all/" + escape(url);
@@ -11,17 +13,26 @@
         }
       };
 
+      ChoosyExtension.choosyToolbarItem = {
+        validate: function() {
+          var url = this.target.browserWindow.activeTab.url;
+          this.target.disabled = !url;
+        },
+        click: function() {
+          var url = this.target.browserWindow.activeTab.url;
+          Choosy.promptAll(url, this.target.browserWindow);
+        }
+      };
+
       safari.application.addEventListener("command", function(event) {
-        if(event.command === "choosy-toolbar-item") {
-          var url = event.target.browserWindow.activeTab.url;
-          Choosy.promptAll(url, event.target.browserWindow);
+        if(ChoosyExtension.hasOwnProperty(event.command)) {
+          ChoosyExtension[event.command].click.apply(event);
         }
       }, false);
 
       safari.application.addEventListener("validate", function(event) {
-        if(event.command === "choosy-toolbar-item") {
-          var url = event.target.browserWindow.activeTab.url;
-          event.target.disabled = !url;
+        if(ChoosyExtension.hasOwnProperty(event.command)) {
+          ChoosyExtension[event.command].validate.apply(event);
         }
       }, false);
 
