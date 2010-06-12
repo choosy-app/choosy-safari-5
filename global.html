@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choosy Safari</title>
+    <script>
+
+      var Choosy = {
+        promptAll: function(url, win) {
+          var choosyURL = "x-choosy://prompt.all/" + escape(url);
+          win.activeTab.url = choosyURL;
+        }
+      };
+
+      safari.application.addEventListener("command", function(event) {
+        if(event.command === "choosy-toolbar-item") {
+          var url = event.target.browserWindow.activeTab.url;
+          Choosy.promptAll(url, event.target.browserWindow);
+        }
+      }, false);
+
+      safari.application.addEventListener("")
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
