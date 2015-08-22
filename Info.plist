@@ -4,6 +4,8 @@
 <dict>
 	<key>Author</key>
 	<string>George Brocklehurst</string>
+	<key>Builder Version</key>
+	<string>10600.5.17</string>
 	<key>CFBundleDisplayName</key>
 	<string>Choosy</string>
 	<key>CFBundleIdentifier</key>
@@ -59,6 +61,8 @@
 	</dict>
 	<key>Description</key>
 	<string>Integrates Choosy with Safari 5</string>
+	<key>DeveloperIdentifier</key>
+	<string>5YVSNS92FV</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
