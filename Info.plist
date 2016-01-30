@@ -76,8 +76,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://downloads.choosyosx.com/safari/update_manifest.plist</string>
+	<string>https://downloads.choosyosx.com/safari/update_manifest.plist</string>
 	<key>Website</key>
-	<string>http://www.choosyosx.com</string>
+	<string>https://www.choosyosx.com</string>
 </dict>
 </plist>
