@@ -10,11 +10,23 @@
        <key>Team Identifier</key>
        <string>5YVSNS92FV</string>
        <key>CFBundleVersion</key>
+       <string>1.1.1</string>
+       <key>CFBundleShortVersionString</key>
+       <string>1.1.1</string>
+       <key>URL</key>
+       <string>https://downloads.choosyosx.com/safari/choosy_1.1.1.safariextz</string>
+     </dict>
+     <dict>
+       <key>CFBundleIdentifier</key>
+       <string>com.choosyosx.choosysafari5</string>
+       <key>Team Identifier</key>
+       <string>5YVSNS92FV</string>
+       <key>CFBundleVersion</key>
        <string>1.1</string>
        <key>CFBundleShortVersionString</key>
        <string>1.1</string>
        <key>URL</key>
-       <string>https://downloads.choosyosx.com/safari/choosy.safariextz</string>
+       <string>https://downloads.choosyosx.com/safari/choosy_1.1.safariextz</string>
      </dict>
    </array>
 </dict>
